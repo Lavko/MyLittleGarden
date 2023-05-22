@@ -1,7 +1,7 @@
 using System.Device.Gpio;
 using Domain.Services;
 
-namespace Infrastructure.GPIO;
+namespace Infrastructure.RaspberryPi.Outputs;
 
 public class OutletService : IOutletService
 {

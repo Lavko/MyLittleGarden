@@ -1,7 +1,7 @@
-using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
-namespace Infrastructure.Persistence;
+namespace Infrastructure.Persistence.Persistence;
 
 public class AppDbContextInitialiser
 {

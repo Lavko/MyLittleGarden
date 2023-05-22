@@ -4,7 +4,7 @@ using Application.Initializers;
 using Application.Scheduler;
 using Domain.Configurations;
 using Infrastructure;
-using Infrastructure.Persistence;
+using Infrastructure.Persistence.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -8,13 +8,13 @@ namespace Application.Scheduler;
 public class MeasuresJob : IJob
 {
     
-    private readonly IBme280Service _bme280Service;
+    private readonly IEnvironmentMeasureService _environmentMeasureService;
     private readonly IUnitOfWork _unitOfWork;
     private readonly ILogger<MeasuresJob> _logger;
 
-    public MeasuresJob(IBme280Service bme280Service, IUnitOfWork unitOfWork, ILogger<MeasuresJob> logger)
+    public MeasuresJob(IEnvironmentMeasureService environmentMeasureService, IUnitOfWork unitOfWork, ILogger<MeasuresJob> logger)
     {
-        _bme280Service = bme280Service;
+        _environmentMeasureService = environmentMeasureService;
         _unitOfWork = unitOfWork;
         _logger = logger;
     }
@@ -23,7 +23,7 @@ public class MeasuresJob : IJob
     {
         _logger.LogDebug("Starting Measures scheduled task");
         
-        var measures = _bme280Service.GetMeasures();
+        var measures = _environmentMeasureService.GetMeasures();
         _unitOfWork.Measures.Add(measures);
 
         await _unitOfWork.CompleteAsync(context.CancellationToken);

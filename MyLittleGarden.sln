@@ -10,6 +10,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Tests", "Application.Tests\Application.Tests.csproj", "{97CC4919-5B2A-424B-B04A-81BB72B3AC89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.RaspberryPi", "Infrastructure.RaspberryPi\Infrastructure.RaspberryPi.csproj", "{F57C98A7-02E7-4F43-9D4D-FB07703EEA91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Persistence", "Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{EF6F4AF4-6B86-4D60-8C1D-256C0D7DCE92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3A04233A-06CF-4D8B-89EC-BEDA4EFA13B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +42,18 @@ Global
 		{97CC4919-5B2A-424B-B04A-81BB72B3AC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97CC4919-5B2A-424B-B04A-81BB72B3AC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97CC4919-5B2A-424B-B04A-81BB72B3AC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57C98A7-02E7-4F43-9D4D-FB07703EEA91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57C98A7-02E7-4F43-9D4D-FB07703EEA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57C98A7-02E7-4F43-9D4D-FB07703EEA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57C98A7-02E7-4F43-9D4D-FB07703EEA91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6F4AF4-6B86-4D60-8C1D-256C0D7DCE92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6F4AF4-6B86-4D60-8C1D-256C0D7DCE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6F4AF4-6B86-4D60-8C1D-256C0D7DCE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6F4AF4-6B86-4D60-8C1D-256C0D7DCE92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4511F6F-7C78-4231-A1E9-6A8452E81297} = {3A04233A-06CF-4D8B-89EC-BEDA4EFA13B8}
+		{EF6F4AF4-6B86-4D60-8C1D-256C0D7DCE92} = {3A04233A-06CF-4D8B-89EC-BEDA4EFA13B8}
+		{F57C98A7-02E7-4F43-9D4D-FB07703EEA91} = {3A04233A-06CF-4D8B-89EC-BEDA4EFA13B8}
 	EndGlobalSection
 EndGlobal

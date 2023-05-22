@@ -5,9 +5,9 @@ using Iot.Device.Bmxx80;
 using Iot.Device.Bmxx80.PowerMode;
 using Microsoft.Extensions.Logging;
 
-namespace Infrastructure.GPIO;
+namespace Infrastructure.RaspberryPi.Sensors;
 
-public class Bme280Service : IBme280Service
+public class Bme280Service : IEnvironmentMeasureService
 {
     private readonly ILogger<Bme280Service> _logger;
     private readonly Bme280 _bme280;

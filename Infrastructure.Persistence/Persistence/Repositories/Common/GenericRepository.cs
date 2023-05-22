@@ -3,7 +3,7 @@ using Domain.Entities.Common;
 using Domain.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Persistence.Repositories.Common;
+namespace Infrastructure.Persistence.Persistence.Repositories.Common;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {

@@ -1,12 +1,12 @@
 using Domain.Services;
 
-namespace Infrastructure.GPIO;
+namespace Infrastructure.Hardware;
 
-public class OutletDevelopService : IOutletService
+public class OutletMockService : IOutletService
 {
     private readonly Dictionary<int, bool> _outlets;
 
-    public OutletDevelopService()
+    public OutletMockService()
     {
         _outlets = new Dictionary<int, bool>();
     }

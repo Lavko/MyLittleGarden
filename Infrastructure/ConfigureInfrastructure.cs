@@ -1,10 +1,12 @@
 using Domain.Repositories;
 using Domain.Repositories.Common;
 using Domain.Services;
-using Infrastructure.GPIO;
-using Infrastructure.Persistence;
-using Infrastructure.Persistence.Repositories;
-using Infrastructure.Persistence.Repositories.Common;
+using Infrastructure.Hardware;
+using Infrastructure.Persistence.Persistence;
+using Infrastructure.Persistence.Persistence.Repositories;
+using Infrastructure.Persistence.Persistence.Repositories.Common;
+using Infrastructure.RaspberryPi.Outputs;
+using Infrastructure.RaspberryPi.Sensors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,13 +39,13 @@ public static class ConfigureInfrastructure
     {
         if (isDevelopment)
         {
-            services.AddScoped<IBme280Service, Bme280DevelopService>();
-            services.AddSingleton<IOutletService, OutletDevelopService>();
+            services.AddScoped<IEnvironmentMeasureService, EnvironmentMeasureMockService>();
+            services.AddSingleton<IOutletService, OutletMockService>();
         }
         else
         {
             services.AddScoped<IOutletService, OutletService>();
-            services.AddScoped<IBme280Service, Bme280Service>();
+            services.AddScoped<IEnvironmentMeasureService, Bme280Service>();
         }
         
         return services;

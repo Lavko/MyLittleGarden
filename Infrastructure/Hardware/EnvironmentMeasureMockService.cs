@@ -1,9 +1,9 @@
 using Domain.Entities;
 using Domain.Services;
 
-namespace Infrastructure.GPIO;
+namespace Infrastructure.Hardware;
 
-public class Bme280DevelopService : IBme280Service
+public class EnvironmentMeasureMockService : IEnvironmentMeasureService
 {
     public EnvironmentMeasure GetMeasures()
     {
