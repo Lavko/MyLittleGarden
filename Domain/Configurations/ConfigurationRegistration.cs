@@ -7,10 +7,6 @@ public static class ConfigurationRegistration
 {
     public static IServiceCollection RegisterConfiguration(this IServiceCollection services, IConfiguration configuration)
     {
-        var outletMappingConfiguration = new OutletMappingConfiguration();
-        configuration.Bind(OutletMappingConfiguration.SectionName, outletMappingConfiguration);
-        services.AddSingleton(outletMappingConfiguration);
-        
         var scheduledServicesConfiguration = new ScheduledServicesConfiguration();
         configuration.Bind(ScheduledServicesConfiguration.SectionName, scheduledServicesConfiguration);
         services.AddSingleton(scheduledServicesConfiguration);

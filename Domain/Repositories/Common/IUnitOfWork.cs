@@ -2,9 +2,9 @@ namespace Domain.Repositories.Common;
 
 public interface IUnitOfWork : IDisposable
 {
-    IEnvironmentMeasureRepository Measures { get; }
-    IOutletConfigurationRepository OutletConfigurations { get; }
-    IActionRuleRepository ActionRules { get; }
-    ITakenActionRepository TakenActions { get; }
+    IDeviceRepository Devices { get; }
+    ISensorRepository Sensors { get; }
+    IMeasurementRepository Measurements { get; }
+    IAppConfigurationRepository AppConfiguration { get; }
     Task<int> CompleteAsync(CancellationToken cancellationToken = default);
 }

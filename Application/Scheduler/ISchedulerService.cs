@@ -5,7 +5,10 @@ namespace Application.Scheduler;
 public interface ISchedulerService
 {
     Task InitializeSavedJobs();
-    Task AddActionJobToScheduleAsync(ScheduledTime time, int ruleId, CancellationToken cancellationToken);
-    Task RemoveJobFromScheduleAsync(int ruleId, CancellationToken cancellationToken);
-    Task<List<string>> GetAllJobs(CancellationToken cancellationToken);
+
+    Task AddI2CJobToScheduleAsync(Device device, CancellationToken cancellationToken = default);
+
+    Task RescheduleJob(Device device, CancellationToken cancellationToken = default);
+
+    Task RemoveDeviceJobFromScheduleAsync(int deviceId, CancellationToken cancellationToken);
 }

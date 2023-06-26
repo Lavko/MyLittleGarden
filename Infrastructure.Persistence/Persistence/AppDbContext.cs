@@ -8,8 +8,8 @@ public class AppDbContext : DbContext
     public AppDbContext(DbContextOptions options)
         : base(options) { }
 
-    public DbSet<EnvironmentMeasure> Measures { get; set; } = null!;
-    public DbSet<ActionRule> ActionRules { get; set; } = null!;
-    public DbSet<OutletConfiguration> OutletConfigurations { get; set; } = null!;
-    public DbSet<TakenAction> TakenActions { get; set; } = null!;
+    public DbSet<Device> Devices { get; set; } = null!;
+    public DbSet<Sensor> Sensors { get; set; } = null!;
+    public DbSet<Measurement> Measurements { get; set; } = null!;
+    public DbSet<AppConfiguration> AppConfigurations { get; set; } = null!;
 }
